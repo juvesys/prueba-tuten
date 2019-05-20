@@ -1,0 +1,41 @@
+<h1>Listado Booking</h1>
+<p>Listado de Bookings</p>
+<div class="container">
+   <div class="col-md-12 text-right">
+      <a class="btn btn-primary" href="#!/" ng-click="singOut()" style="width:300px">Salir</a>
+   </div>
+</div>
+<div class="container">
+   <div class="row">
+      <div class="col-md-12 col-sm-12  ">
+         <h1 class="text-center login-title">Listado</h1>
+         <div class="account-wall">
+            <div class="">
+               <label>Filtrar</label>
+               <br>
+               <input type="text" ng-model="busqueda" class="form-control" placeholder="Escriba, id, nombre, precio para filtrar">
+            </div>
+            <table class="table">
+               <thead>
+               <tr>
+                  <th>Id</th>
+                  <th>Cliente</th>
+                  <th>Fecha de Creación</th>
+                  <th>Direccion</th>
+                  <th>Precio</th>
+               </tr>
+               </thead>
+               <tbody>
+               <tr ng-repeat="dato in datos | filter: busqueda">
+                 <td>{{dato.bookingId}}</td>
+                 <td>{{dato.tutenUserClient.firstName}} {{dato.tutenUserClient.lastName}}</td>
+                  <td>{{dato.bookingTime | date:'dd/MM/yyyy'}}</td>
+                  <td>{{dato.locationId.streetAddress}}</td>
+                  <td>{{dato.bookingPrice | currency}}</td>
+               </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="pruebaApp" ng-controller="mainCtrl">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <title>Prueba Tuten</title>
+
+
+   <!-- Incluir Bootstrap -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+   <!-- Animate.css -->
+   <link rel="stylesheet" href="assets/css/animate.css">
+   <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+   <!-- Estilo personalizado -->
+   <link rel="stylesheet" href="assets/css/style.css">
+
+   <!-- Incluir AngularJS -->
+   <script src="assets/libs/angular.min.js"></script>
+   <script src="assets/libs/angular-route.min.js"></script>
+   <script src="assets/libs/angular-cookies.min.js"></script>
+
+
+
+   <script src="assets/js/app.js"></script>
+   <script src="assets/js/config.js"></script>
+   <script src="assets/controllers/mainCtrl.js"></script>
+   <!-- Controladores de páginas -->
+   <script src="assets/controllers/homeCtrl.js"></script>
+   <script src="assets/controllers/accessCtrl.js"></script>
+
+   <!-- Services -->
+   <script src="assets/services/services.js"></script>
+</head>
+<body>
+<div ng-include="menuSuperior"></div>
+<div class="container">
+   <!-- La pagina principal -->
+   <div ng-view></div>
+</div>
+<!-- /.container -->
+</body>
+</html>
